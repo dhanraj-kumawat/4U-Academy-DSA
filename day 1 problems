@@ -172,7 +172,24 @@ public class question16 {
     }
 }
 
+#question 17
 
+public class question17 {
+    public static void main(String[] args) {
+        int arr[] = { 1, 2, 3, 4, 5, 6, 0 };
+        int k = 9;
+        int i = 4;
+
+        for (int j = arr.length - 1; j > i; j--) {
+            arr[j] = arr[j - 1];
+        }
+        arr[i] = 9;
+
+        for (int x : arr) {
+            System.out.println(x);
+        }
+    }
+}
 
 
 
