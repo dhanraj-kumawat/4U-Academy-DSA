@@ -141,7 +141,7 @@ public class question10 {
 #question 11
 
 
-#question 16
+#question 16 
 
 public class question16 {
     public static void main(String[] args) {
@@ -176,7 +176,43 @@ public class question16 {
 
 
 
-#question 12
+#question 18
+
+public class question18 {
+    public static void main(String[] args) {
+        int a[] = {1,2,3,4,5,6,7};
+        int b[] = {11,33,66,77,99,45,22};
+
+        int c[] = new int [7];
+
+        for(int i = 0; i<7; i++){
+            c[i] = a[i]+b[i];
+        }
+         
+        for (int x : c) {
+            System.out.println(x);
+        }
+    }
+}
+
+ 
+
+#question 19
+
+public class question19 {
+    public static void main(String[] args) {
+        int arr[] = {-10,-20,-11,-2,-5};
+
+       int maxNum = arr[0];
+
+       for(int i= 1; i<arr.length; i++){
+        if(arr[i]> maxNum)
+          maxNum = arr[i];
+       }
+       System.out.println(maxNum);
+    }
+}
+
 
 
 
@@ -204,5 +240,30 @@ public class question20 {
 }
 
 
+#question 21
+
+
+
+
+
+#question 22
+
+import java.util.*;
+
+public class question22 {
+    public static void main(String[] args) {
+        int a[] = { 1, 2, 3, 4, 5, 6, 7 };
+        int sum = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter ith index: ");
+        int i = sc.nextInt();
+
+        for (int j = 0; j <= i; j++) {
+            sum += a[j];
+
+        }
+        System.out.println("the sum is:  "+sum);
+    }
+}
 
 
