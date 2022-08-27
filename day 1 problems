@@ -141,6 +141,62 @@ public class question10 {
 #question 11
 
 
+
+
+
+#question 14
+
+public class question14 {
+    public static void main(String[] args) {
+        int[] arr = { 10, 2, 5, 8, 22, 9, 3 };
+
+        int reverseArr[] = new int[7];
+
+        for (int i = 0, j = 6; i < 7 & j >= 0; i++, j--) {
+            reverseArr[i] = arr[j];
+        }
+
+        System.out.println("before reversing: ");
+        for (int i : arr) {
+            System.out.println(i);
+        }
+        System.out.println("after reversing: ");
+        for (int i : reverseArr) {
+            System.out.println(i);
+        }
+    }
+} 
+
+
+
+
+#question 15
+
+public class question15 {
+    public static void main(String[] args) {
+        int[] arr = { 1, 5, 7, 3, 2, 15, 10 };
+
+        System.out.println("before reversing: ");
+
+        for (int i : arr) {
+            System.out.println(i);
+        }
+
+        for (int i = 0, j = arr.length - 1; i < j; i++, j--) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+        System.out.println("after reversing: ");
+        for (int i : arr) {
+            System.out.println(i);
+
+        }
+    }
+}
+
+
+
 #question 16 
 
 public class question16 {
@@ -171,6 +227,7 @@ public class question16 {
            } 
     }
 }
+
 
 #question 17
 
@@ -259,6 +316,48 @@ public class question20 {
 
 #question 21
 
+// for identity matrix 
+// 1. it's must be a square matrix  .
+// 2. all elements must be zero except diagonal elements
+// 3. diagonal elements must be 1.
+
+public class question21 {
+    public static void main(String[] args) {
+        int arr[][] = { { 1, 0, 0 },
+                        { 0, 1, 0 },
+                        { 0, 0, 1 } };
+        boolean flag = true;
+         int k = 0;
+        while(k<arr.length){
+        if (arr.length != arr[k].length){
+
+            System.out.println("not an identity matrix");
+            System.exit(0);
+        }
+        k++;
+        
+    }
+
+    for(int i = 0; i < arr.length; i++){    
+        for(int j = 0; j < arr[0].length; j++){    
+          if(i == j && arr[i][j] != 1){    
+              flag = false;    
+              break;    
+          }    
+          if(i != j && arr[i][j] != 0){    
+              flag = false;    
+              break;    
+          }    
+        }    
+    }    
+        
+    if(flag)    
+        System.out.println("an identity matrix");    
+    else    
+        System.out.println("not an identity matrix");    
+    
+    }
+}
 
 
 
